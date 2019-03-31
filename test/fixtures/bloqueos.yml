@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_bloqueo: MyString
+  detalle_bloqueo: MyString
+  monto_bloqueo: 1.5
+  usuario: one
+
+two:
+  fecha_bloqueo: MyString
+  detalle_bloqueo: MyString
+  monto_bloqueo: 1.5
+  usuario: two

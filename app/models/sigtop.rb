@@ -1,0 +1,2 @@
+class Sigtop < ApplicationRecord
+end

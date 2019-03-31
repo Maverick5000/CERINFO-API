@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_usuario: MyString
+  paterno_usuario: MyString
+  materno_usuario: MyString
+  registro_usuario: MyString
+  tipo_usuario: MyString
+
+two:
+  nombre_usuario: MyString
+  paterno_usuario: MyString
+  materno_usuario: MyString
+  registro_usuario: MyString
+  tipo_usuario: MyString

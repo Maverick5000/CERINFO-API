@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_devolucion: MyString
+  fecha_prestamo: MyString
+  dias_prestados: MyString
+  libro: one
+  usuario: one
+
+two:
+  fecha_devolucion: MyString
+  fecha_prestamo: MyString
+  dias_prestados: MyString
+  libro: two
+  usuario: two

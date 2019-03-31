@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  estado_multa: MyString
+  detalle_multa: MyString
+  monto_multa: 1.5
+  usuario: one
+
+two:
+  estado_multa: MyString
+  detalle_multa: MyString
+  monto_multa: 1.5
+  usuario: two

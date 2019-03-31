@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  localidad_sigtop: MyString
+  dewey_sigtop: MyString
+  cuter_sigtop: MyString
+
+two:
+  localidad_sigtop: MyString
+  dewey_sigtop: MyString
+  cuter_sigtop: MyString

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  significado_idioma: MyString
+  abreviatura_idioma: MyString
+
+two:
+  significado_idioma: MyString
+  abreviatura_idioma: MyString

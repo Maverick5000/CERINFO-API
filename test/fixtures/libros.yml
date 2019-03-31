@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo_libro: MyString
+  tomo_libro: MyString
+  area_libro: MyString
+  edicion_libro: MyString
+  ano_libro: MyString
+  lugar_publicacion_libro: MyString
+  ano_publicacion_libro: MyString
+  autor: one
+  genero: one
+  idioma: one
+  material: one
+  sigtop: one
+  editorial: one
+
+two:
+  titulo_libro: MyString
+  tomo_libro: MyString
+  area_libro: MyString
+  edicion_libro: MyString
+  ano_libro: MyString
+  lugar_publicacion_libro: MyString
+  ano_publicacion_libro: MyString
+  autor: two
+  genero: two
+  idioma: two
+  material: two
+  sigtop: two
+  editorial: two
