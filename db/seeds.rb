@@ -8,18 +8,17 @@
 
 require 'faker'
 
-#10.times do
-#    Genero.create( nombre_genero: Faker::Book.genre, abreviatura_genero: Faker::Science.element_symbol) 
-#end
-
-#50.times do
-#     Editorial.create( nombre_editorial: Faker::Book.publisher)
-#     Autor.create( nombre_autor: Faker::Book.author)
-#     Sigtop.create(localidad_sigtop: Faker::Address.country, dewey_sigtop:Faker::Lorem.words(5) , cuter_sigtop:Faker::Lorem.words(5) )
-#     Idioma.create(significado_idioma: Faker::Nation.language, abreviatura_idioma:Faker::Science.element_symbol )
-#     Material.create(significado_material:Faker::Science.element , abreviatura_material:Faker::Science.element_symbol)
-#     Usuario.create(nombre_usuario: Faker::Name.first_name, paterno_usuario:Faker::Name.last_name, materno_usuario:Faker::Name.last_name, registro_usuario:Faker::Number.number(10), tipo_usuario:Faker::Military.air_force_rank)
-##end
+10.times do
+    Genero.create( nombre_genero: Faker::Book.genre, abreviatura_genero: Faker::Science.element_symbol) 
+end
+50.times do
+     Editorial.create( nombre_editorial: Faker::Book.publisher)
+     Autor.create( nombre_autor: Faker::Book.author)
+     Sigtop.create(localidad_sigtop: Faker::Address.country, dewey_sigtop:Faker::Lorem.words(5) , cuter_sigtop:Faker::Lorem.words(5) )
+     Idioma.create(significado_idioma: Faker::Nation.language, abreviatura_idioma:Faker::Science.element_symbol )
+     Material.create(significado_material:Faker::Science.element , abreviatura_material:Faker::Science.element_symbol)
+     Usuario.create(nombre_usuario: Faker::Name.first_name, paterno_usuario:Faker::Name.last_name, materno_usuario:Faker::Name.last_name, registro_usuario:Faker::Number.number(10), tipo_usuario:Faker::Military.air_force_rank)
+end
 
 #50.times do
 #     @editorial = Editorial.order("RAND()").limit(1)
