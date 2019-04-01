@@ -52,3 +52,6 @@ production:
   database: workspace_production
   username: workspace
   password: <%= ENV['WORKSPACE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  pool: 5
+  timeout: 5000

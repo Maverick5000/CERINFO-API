@@ -5,13 +5,19 @@ ruby '2.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'paper_trail'
 gem 'faker'
 gem 'rswag'
+# Use mysql as the database for Active Record
+group :devlopment, :test do
+  gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+end
+
+group :production do
+  gem 'pg'
+end
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
