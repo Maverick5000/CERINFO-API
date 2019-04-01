@@ -8,9 +8,10 @@
 
 require 'faker'
 
-10.times do
-    Genero.create( nombre_genero: Faker::Book.genre, abreviatura_genero: Faker::Science.element_symbol) 
-end
+#10.times do
+#    Genero.create( nombre_genero: Faker::Book.genre, abreviatura_genero: Faker::Science.element_symbol) 
+#end
+
 50.times do
      Editorial.create( nombre_editorial: Faker::Book.publisher)
      Autor.create( nombre_autor: Faker::Book.author)
