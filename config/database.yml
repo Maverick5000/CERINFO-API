@@ -9,7 +9,7 @@ development:
 production:
    url: <%= ENV['DATABASE_URL'] %>
    encoding: unicode
-   database: cerinfo
+   database: d7e9brgls0f87c
    pool: 5
    username: pclulcblktzdxg
    password: e6edb58e9c187a781f9a2e241fc4f477a6bb95ea8af9c2c2a7762e015e44c7e2
