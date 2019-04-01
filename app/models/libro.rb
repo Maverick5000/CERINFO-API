@@ -5,4 +5,5 @@ class Libro < ApplicationRecord
   belongs_to :material
   belongs_to :sigtop
   belongs_to :editorial
+  has_paper_trail
 end
