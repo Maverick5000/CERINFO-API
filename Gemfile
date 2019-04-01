@@ -16,7 +16,8 @@ group :devlopment, :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.20' 
+  gem 'rails_12factor'
 end
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
