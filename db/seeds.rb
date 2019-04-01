@@ -12,24 +12,24 @@ require 'faker'
 #    Genero.create( nombre_genero: Faker::Book.genre, abreviatura_genero: Faker::Science.element_symbol) 
 #end
 
-50.times do
-     Editorial.create( nombre_editorial: Faker::Book.publisher)
-     Autor.create( nombre_autor: Faker::Book.author)
-     Sigtop.create(localidad_sigtop: Faker::Address.country, dewey_sigtop:Faker::Lorem.words(5) , cuter_sigtop:Faker::Lorem.words(5) )
-     Idioma.create(significado_idioma: Faker::Nation.language, abreviatura_idioma:Faker::Science.element_symbol )
-     Material.create(significado_material:Faker::Science.element , abreviatura_material:Faker::Science.element_symbol)
-     Usuario.create(nombre_usuario: Faker::Name.first_name, paterno_usuario:Faker::Name.last_name, materno_usuario:Faker::Name.last_name, registro_usuario:Faker::Number.number(10), tipo_usuario:Faker::Military.air_force_rank)
-end
-
 #50.times do
-#     @editorial = Editorial.order("RAND()").limit(1)
-#     @autor = Autor.order("RAND()").limit(1)
-#     @genero = Genero.order("RAND()").limit(1)
-#     @idioma = Idioma.order("RAND()").limit(1)
-#    @sigtop = Sigtop.order("RAND()").limit(1)
-#     @material = Material.order("RAND()").limit(1)
-#     Libro.create(titulo_libro:Faker::Book.title, tomo_libro:Faker::Number.number(1), area_libro:Faker::Science.element_symbol, edicion_libro:Faker::Number.number(1), ano_libro:Faker::Date.backward(36500), lugar_publicacion_libro:Faker::Address.country, ano_publicacion_libro:Faker::Date.backward(36500), autor:@autor.first, genero:@genero.first, idioma:@idioma.first, sigtop:@sigtop.first, editorial:@editorial.first, material:@material.first)
+#     Editorial.create( nombre_editorial: Faker::Book.publisher)
+#     Autor.create( nombre_autor: Faker::Book.author)
+#     Sigtop.create(localidad_sigtop: Faker::Address.country, dewey_sigtop:Faker::Lorem.words(5) , cuter_sigtop:Faker::Lorem.words(5) )
+#     Idioma.create(significado_idioma: Faker::Nation.language, abreviatura_idioma:Faker::Science.element_symbol )
+#     Material.create(significado_material:Faker::Science.element , abreviatura_material:Faker::Science.element_symbol)
+#     Usuario.create(nombre_usuario: Faker::Name.first_name, paterno_usuario:Faker::Name.last_name, materno_usuario:Faker::Name.last_name, registro_usuario:Faker::Number.number(10), tipo_usuario:Faker::Military.air_force_rank)
 #end
+
+50.times do
+     @editorial = Editorial.order("RAND()").limit(1)
+     @autor = Autor.order("RAND()").limit(1)
+     @genero = Genero.order("RAND()").limit(1)
+     @idioma = Idioma.order("RAND()").limit(1)
+    @sigtop = Sigtop.order("RAND()").limit(1)
+     @material = Material.order("RAND()").limit(1)
+     Libro.create(titulo_libro:Faker::Book.title, tomo_libro:Faker::Number.number(1), area_libro:Faker::Science.element_symbol, edicion_libro:Faker::Number.number(1), ano_libro:Faker::Date.backward(36500), lugar_publicacion_libro:Faker::Address.country, ano_publicacion_libro:Faker::Date.backward(36500), autor:@autor.first, genero:@genero.first, idioma:@idioma.first, sigtop:@sigtop.first, editorial:@editorial.first, material:@material.first)
+end
 
 #50.times do
 #    @usuario = Usuario.order("RAND()").limit(1)
