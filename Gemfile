@@ -18,6 +18,7 @@ end
 group :production do
   gem 'pg', '~> 0.20' 
   gem 'rails_12factor'
+  gem 'rack-timeout', '0.3.2'
 end
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
