@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 2019_03_31_235025) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "versions",  force: :cascade do |t|
     t.string "item_type", limit: 191, null: false
     t.integer "item_id", null: false
     t.string "event", null: false
