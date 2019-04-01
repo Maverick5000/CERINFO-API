@@ -26,7 +26,7 @@ require 'faker'
 #     @autor = Autor.order("RAND()").limit(1)
 #     @genero = Genero.order("RAND()").limit(1)
 #     @idioma = Idioma.order("RAND()").limit(1)
-#     @sigtop = Sigtop.order("RAND()").limit(1)
+#    @sigtop = Sigtop.order("RAND()").limit(1)
 #     @material = Material.order("RAND()").limit(1)
 #     Libro.create(titulo_libro:Faker::Book.title, tomo_libro:Faker::Number.number(1), area_libro:Faker::Science.element_symbol, edicion_libro:Faker::Number.number(1), ano_libro:Faker::Date.backward(36500), lugar_publicacion_libro:Faker::Address.country, ano_publicacion_libro:Faker::Date.backward(36500), autor:@autor.first, genero:@genero.first, idioma:@idioma.first, sigtop:@sigtop.first, editorial:@editorial.first, material:@material.first)
 #end
