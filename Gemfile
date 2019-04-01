@@ -10,6 +10,7 @@ gem 'puma', '~> 3.11'
 gem 'paper_trail'
 gem 'faker'
 gem 'rswag'
+gem 'rspec-core', '~> 3.4' 
 # Use mysql as the database for Active Record
 group :devlopment, :test do
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
@@ -18,7 +19,6 @@ end
 group :production do
   gem 'pg', '~> 0.20' 
   gem 'rails_12factor'
-  gem 'rack-timeout', '0.3.2'
 end
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
