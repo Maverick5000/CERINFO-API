@@ -34,6 +34,7 @@ require 'faker'
 50.times do
     @usuario = Usuario.order("RANDOM()").limit(1)
     @libro = Libro.order("RANDOM()").limit(1)
+    Usuario.create(nombre_usuario: Faker::Name.first_name, paterno_usuario:Faker::Name.last_name, materno_usuario:Faker::Name.last_name, registro_usuario:Faker::Number.number(10), tipo_usuario:Faker::Military.air_force_rank)
     Prestamo.create(fecha_devolucion:Faker::Date.backward(100), fecha_prestamo:Faker::Date.backward(100), dias_prestados:Faker::Number.number(2), libro:@libro.first, usuario:@usuario.first)
     Bloqueo.create(fecha_bloqueo:Faker::Date.backward(100), detalle_bloqueo:Faker::Lorem.words(5), monto_bloqueo:Faker::Number.decimal(2), usuario:@usuario.first)
     Multa.create(estado_multa:Faker::Lorem.words(1), detalle_multa:Faker::Lorem.words(5), monto_multa:Faker::Number.decimal(2), usuario:@usuario.first)
