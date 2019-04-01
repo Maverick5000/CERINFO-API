@@ -22,18 +22,18 @@ require 'faker'
 #end
 
 50.times do
-     @editorial = Editorial.order("RAND()").limit(1)
-     @autor = Autor.order("RAND()").limit(1)
-     @genero = Genero.order("RAND()").limit(1)
-     @idioma = Idioma.order("RAND()").limit(1)
-    @sigtop = Sigtop.order("RAND()").limit(1)
-     @material = Material.order("RAND()").limit(1)
+     @editorial = Editorial.order("RANDOM()").limit(1)
+     @autor = Autor.order("RANDOM()").limit(1)
+     @genero = Genero.order("RANDOM()").limit(1)
+     @idioma = Idioma.order("RANDOM()").limit(1)
+    @sigtop = Sigtop.order("RANDOM()").limit(1)
+     @material = Material.order("RANDOM()").limit(1)
      Libro.create(titulo_libro:Faker::Book.title, tomo_libro:Faker::Number.number(1), area_libro:Faker::Science.element_symbol, edicion_libro:Faker::Number.number(1), ano_libro:Faker::Date.backward(36500), lugar_publicacion_libro:Faker::Address.country, ano_publicacion_libro:Faker::Date.backward(36500), autor:@autor.first, genero:@genero.first, idioma:@idioma.first, sigtop:@sigtop.first, editorial:@editorial.first, material:@material.first)
 end
 
 #50.times do
-#    @usuario = Usuario.order("RAND()").limit(1)
-#    @libro = Libro.order("RAND()").limit(1)
+#    @usuario = Usuario.order("RANDOM()").limit(1)
+#    @libro = Libro.order("RANDOM()").limit(1)
 #    Prestamo.create(fecha_devolucion:Faker::Date.backward(100), fecha_prestamo:Faker::Date.backward(100), dias_prestados:Faker::Number.number(2), libro:@libro.first, usuario:@usuario.first)
 #    Bloqueo.create(fecha_bloqueo:Faker::Date.backward(100), detalle_bloqueo:Faker::Lorem.words(5), monto_bloqueo:Faker::Number.decimal(2), usuario:@usuario.first)
 #    Multa.create(estado_multa:Faker::Lorem.words(1), detalle_multa:Faker::Lorem.words(5), monto_multa:Faker::Number.decimal(2), usuario:@usuario.first)
