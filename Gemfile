@@ -17,7 +17,7 @@ group :devlopment, :test do
 end
 
 group :production do
-  #gem 'pg', '~> 0.20' 
+  gem 'pg', '~> 0.20' 
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
   gem 'rails_12factor'
 end
