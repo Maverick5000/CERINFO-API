@@ -12,6 +12,8 @@ class LibrosController < ApplicationController
 
   # GET /libros/1
   def show
+    @libro = Libro.joins(:autor, :genero, :idioma, :material, :sigtop, :editorial).where("libros.id = ?",params[:id]).select("libros.id, titulo_libro, tomo_libro, area_libro, edicion_libro, ano_libro, lugar_publicacion_libro, ano_publicacion_libro, nombre_autor, nombre_genero, significado_idioma, significado_material, localidad_sigtop, dewey_sigtop, cuter_sigtop, nombre_editorial")
+    
     render json: @libro
   end
 
@@ -43,8 +45,7 @@ class LibrosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_libro
-     # @libro = Libro.find(params[:id])
-       @libro = Libro.joins(:autor, :genero, :idioma, :material, :sigtop, :editorial).where("libros.id = ?",params[:id]).select("libros.id, titulo_libro, tomo_libro, area_libro, edicion_libro, ano_libro, lugar_publicacion_libro, ano_publicacion_libro, nombre_autor, nombre_genero, significado_idioma, significado_material, localidad_sigtop, dewey_sigtop, cuter_sigtop, nombre_editorial")
+      @libro = Libro.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
