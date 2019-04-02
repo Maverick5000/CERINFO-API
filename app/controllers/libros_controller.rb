@@ -3,7 +3,9 @@ class LibrosController < ApplicationController
 
   # GET /libros
   def index
-    @libros = Libro.all
+    #@libros = Libro.all
+    @libros = Libro.select("id, titulo_libro, tomo_libro, area_libro, edicion_libro, ano_libro, lugar_publicacion_libro, ano_publicacion_libro, nombre_autor").joins(autor:)
+
 
     render json: @libros
   end
