@@ -4,6 +4,8 @@ default: &default
 
 development:
   <<: *default
+  username: krauss
+  password: ventania
   database: your_app_development
 
 production:

@@ -10,15 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_31_235025) do
+ActiveRecord::Schema.define(version: 2019_04_03_182803) do
 
-  create_table "autors",  force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "autors", force: :cascade do |t|
     t.string "nombre_autor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "bloqueos",  force: :cascade do |t|
+  create_table "bloqueos", force: :cascade do |t|
     t.string "fecha_bloqueo"
     t.string "detalle_bloqueo"
     t.float "monto_bloqueo"
@@ -28,27 +31,27 @@ ActiveRecord::Schema.define(version: 2019_03_31_235025) do
     t.index ["usuario_id"], name: "index_bloqueos_on_usuario_id"
   end
 
-  create_table "editorials",  force: :cascade do |t|
+  create_table "editorials", force: :cascade do |t|
     t.string "nombre_editorial"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "generos",  force: :cascade do |t|
+  create_table "generos", force: :cascade do |t|
     t.string "nombre_genero"
     t.string "abreviatura_genero"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "idiomas",  force: :cascade do |t|
+  create_table "idiomas", force: :cascade do |t|
     t.string "significado_idioma"
     t.string "abreviatura_idioma"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "libros",  force: :cascade do |t|
+  create_table "libros", force: :cascade do |t|
     t.string "titulo_libro"
     t.string "tomo_libro"
     t.string "area_libro"
@@ -72,14 +75,14 @@ ActiveRecord::Schema.define(version: 2019_03_31_235025) do
     t.index ["sigtop_id"], name: "index_libros_on_sigtop_id"
   end
 
-  create_table "materials",  force: :cascade do |t|
+  create_table "materials", force: :cascade do |t|
     t.string "significado_material"
     t.string "abreviatura_material"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "multa",  force: :cascade do |t|
+  create_table "multa", force: :cascade do |t|
     t.string "estado_multa"
     t.string "detalle_multa"
     t.float "monto_multa"
@@ -89,7 +92,7 @@ ActiveRecord::Schema.define(version: 2019_03_31_235025) do
     t.index ["usuario_id"], name: "index_multa_on_usuario_id"
   end
 
-  create_table "prestamos",  force: :cascade do |t|
+  create_table "prestamos", force: :cascade do |t|
     t.string "fecha_devolucion"
     t.string "fecha_prestamo"
     t.string "dias_prestados"
@@ -101,7 +104,7 @@ ActiveRecord::Schema.define(version: 2019_03_31_235025) do
     t.index ["usuario_id"], name: "index_prestamos_on_usuario_id"
   end
 
-  create_table "sigtops",  force: :cascade do |t|
+  create_table "sigtops", force: :cascade do |t|
     t.string "localidad_sigtop"
     t.string "dewey_sigtop"
     t.string "cuter_sigtop"
@@ -109,7 +112,7 @@ ActiveRecord::Schema.define(version: 2019_03_31_235025) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "usuarios",  force: :cascade do |t|
+  create_table "usuarios", force: :cascade do |t|
     t.string "nombre_usuario"
     t.string "paterno_usuario"
     t.string "materno_usuario"
@@ -117,14 +120,15 @@ ActiveRecord::Schema.define(version: 2019_03_31_235025) do
     t.string "tipo_usuario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "password"
   end
 
-  create_table "versions",  force: :cascade do |t|
+  create_table "versions", force: :cascade do |t|
     t.string "item_type", limit: 191, null: false
     t.integer "item_id", null: false
     t.string "event", null: false
     t.string "whodunnit"
-    t.text "object", limit: 4294967295
+    t.text "object"
     t.datetime "created_at"
     t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end

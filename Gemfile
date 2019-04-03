@@ -14,6 +14,7 @@ gem 'rspec-core', '~> 3.4'
 # Use mysql as the database for Active Record
 group :devlopment, :test do
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
 group :production do

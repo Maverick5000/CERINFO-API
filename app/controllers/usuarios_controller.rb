@@ -1,6 +1,17 @@
 class UsuariosController < ApplicationController
   before_action :set_usuario, only: [:show, :update, :destroy]
 
+  # GET /usuarios/login
+  def login
+    @usuarios = Usuario.where("registro_usuario = ? AND password = ?",params[:registro],params[:password]).pluck("tipo_usuario")
+    if @usuarios.empty?
+      @res = {"Respuesta": "Login Incorrecto"}
+      render :status =>404, json: @res
+    else
+      render :status =>200, json: @usuarios
+    end
+  end
+
   # GET /usuarios
   def index
     @usuarios = Usuario.all
@@ -47,5 +58,9 @@ class UsuariosController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def usuario_params
       params.fetch(:usuario, {})
+    end
+
+    def login_params
+      params.fetch(:registro,:password, {})
     end
 end
