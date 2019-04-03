@@ -114,22 +114,22 @@
                 "ano_publicacion_libro": {
                   "type": "string"
                 },
-                "autor": {
+                "autor_id": {
                   "type": "integer"
                 },
-                "genero": {
+                "genero_id": {
                   "type": "integer"
                 },
-                "idioma": {
+                "idioma_id": {
                   "type": "integer"
                 },
-                "material": {
+                "material_id": {
                   "type": "integer"
                 },
-                "sigtop": {
+                "sigtop_id": {
                   "type": "integer"
                 },
-                "editorial": {
+                "editorial_id": {
                   "type": "integer"
                 }
               },
@@ -141,12 +141,12 @@
                 "ano_libro",
                 "lugar_publicacion_libro",
                 "ano_publicacion_libro",
-                "autor",
-                "genero",
-                "idioma",
-                "material",
-                "sigtop",
-                "editorial"
+                "autor_id",
+                "genero_id",
+                "idioma_id",
+                "material_id",
+                "sigtop_id",
+                "editorial_id"
               ]
             }
           }
