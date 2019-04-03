@@ -1,14 +1,12 @@
 class LibrosController < ApplicationController
   before_action :set_libro, only: [:show, :update, :destroy]
 
-  respond_to :json
-
       swagger_controller :libro, 'Libros'
 
       swagger_api :index do
         summary 'Returns all Libros'
         notes 'Notes...'
-  end
+      end
 
   # GET /libros
   def index
