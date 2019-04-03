@@ -176,14 +176,14 @@ describe 'CERINFO API' do
               ano_libro: { type: :string },
               lugar_publicacion_libro: { type: :string },
               ano_publicacion_libro: { type: :string },
-              autor: { type: :integer },
-              genero: { type: :integer },
-              idioma: { type: :integer },
-              material: { type: :integer },
-              sigtop: { type: :integer },
-              editorial: { type: :integer }
+              autor_id: { type: :integer },
+              genero_id: { type: :integer },
+              idioma_id: { type: :integer },
+              material_id: { type: :integer },
+              sigtop_id: { type: :integer },
+              editorial_id: { type: :integer }
             },
-            required: [ 'titulo_libro', 'tomo_libro', 'area_libro', 'edicion_libro', 'ano_libro', 'lugar_publicacion_libro', 'ano_publicacion_libro', 'autor', 'genero', 'idioma', 'material', 'sigtop', 'editorial' ]
+            required: [ 'titulo_libro', 'tomo_libro', 'area_libro', 'edicion_libro', 'ano_libro', 'lugar_publicacion_libro', 'ano_publicacion_libro', 'autor_id', 'genero_id', 'idioma_id', 'material_id', 'sigtop_id', 'editorial_id' ]
           }
     
           response '200', 'libro editado' do
