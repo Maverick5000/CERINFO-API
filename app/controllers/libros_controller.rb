@@ -4,7 +4,6 @@ class LibrosController < ApplicationController
   # GET /libros
   def index
     #@libros = Libro.all
-    #
     @libros = Libro.joins(:autor, :genero, :idioma, :material, :sigtop, :editorial).select("libros.id, titulo_libro, tomo_libro, area_libro, edicion_libro, ano_libro, lugar_publicacion_libro, ano_publicacion_libro, nombre_autor, nombre_genero, significado_idioma, significado_material, localidad_sigtop, dewey_sigtop, cuter_sigtop, nombre_editorial")
 
 
@@ -51,6 +50,6 @@ class LibrosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def libro_params
-      params.fetch(:libro, {})
+      params.fetch(:libro, {}).permit(:titulo_libro, :tomo_libro, :area_libro, :edicion_libro, :ano_libro, :lugar_publicacion_libro, :ano_publicacion_libro,:autor, :genero, :idioma, :material, :sigtop, :editorial)
     end
 end
