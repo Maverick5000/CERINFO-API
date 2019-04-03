@@ -1,13 +1,6 @@
 class LibrosController < ApplicationController
   before_action :set_libro, only: [:show, :update, :destroy]
 
-      swagger_controller :libro, 'Libros'
-
-      swagger_api :index do
-        summary 'Returns all Libros'
-        notes 'Notes...'
-      end
-
   # GET /libros
   def index
     #@libros = Libro.all
@@ -27,7 +20,6 @@ class LibrosController < ApplicationController
   # POST /libros
   def create
     @libro = Libro.new(libro_params)
-    #@libro = Libro.new(params[:titulo_libro], params[:tomo_libro], params[:area_libro], params[:edicion_libro], params[:ano_libro], params[:lugar_publicacion_libro], params[:ano_publicacion_libro], params[:autor], params[:genero], params[:idioma], params[:sigtop], params[:editorial], params[:material], params[:sigtop],params[:editorial])
 
     if @libro.save
       render json: @libro, status: :created, location: @libro
