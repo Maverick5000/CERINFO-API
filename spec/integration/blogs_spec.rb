@@ -21,12 +21,14 @@ describe 'CERINFO API' do
             ano_libro: { type: :string },
             lugar_publicacion_libro: { type: :string },
             ano_publicacion_libro: { type: :string },
-            autor: { type: :integer },
-            genero: { type: :integer },
-            idioma: { type: :integer },
-            material: { type: :integer },
-            sigtop: { type: :integer },
-            editorial: { type: :integer }
+            nombre_autor: { type: :string },
+            nombre_genero: { type: :string },
+            significado_idioma: { type: :string },
+            significado_material: { type: :string },
+            localidad_sigtop: { type: :string },
+            dewey_sigtop: { type: :string },
+            cuter_sigtop: { type: :string },
+            nombre_editorial: { type: :string }
           },
           required: [  ]
 
@@ -55,22 +57,24 @@ describe 'CERINFO API' do
 
       response '200', 'libro encontrado' do
         schema type: :object,
-          properties: {
-            id: { type: :integer },
-            titulo_libro: { type: :string },
-            tomo_libro: { type: :string },
-            area_libro: { type: :string },
-            edicion_libro: { type: :string },
-            ano_libro: { type: :string },
-            lugar_publicacion_libro: { type: :string },
-            ano_publicacion_libro: { type: :string },
-            autor: { type: :integer },
-            genero: { type: :integer },
-            idioma: { type: :integer },
-            material: { type: :integer },
-            sigtop: { type: :integer },
-            editorial: { type: :integer }
-          },
+        properties: {
+          id: { type: :integer },
+          titulo_libro: { type: :string },
+          tomo_libro: { type: :string },
+          area_libro: { type: :string },
+          edicion_libro: { type: :string },
+          ano_libro: { type: :string },
+          lugar_publicacion_libro: { type: :string },
+          ano_publicacion_libro: { type: :string },
+          nombre_autor: { type: :string },
+          nombre_genero: { type: :string },
+          significado_idioma: { type: :string },
+          significado_material: { type: :string },
+          localidad_sigtop: { type: :string },
+          dewey_sigtop: { type: :string },
+          cuter_sigtop: { type: :string },
+          nombre_editorial: { type: :string }
+        },
           required: [  ]
 
         let(:id) {  }
