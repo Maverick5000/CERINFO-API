@@ -1,4 +1,5 @@
 class LibrosController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_libro, only: [:show, :update, :destroy]
 
   # GET /libros
