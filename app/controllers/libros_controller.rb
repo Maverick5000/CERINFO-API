@@ -8,7 +8,7 @@ class LibrosController < ApplicationController
       swagger_api :index do
         summary 'Returns all Libros'
         notes 'Notes...'
-      end
+  end
 
   # GET /libros
   def index
