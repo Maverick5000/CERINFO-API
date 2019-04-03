@@ -375,6 +375,79 @@
           }
         }
       }
+    },
+    "/usuarios": {
+      "get": {
+        "summary": "Muestra todos los usuarios",
+        "tags": [
+          "Usuario"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "usuarios encontrados",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "titulo_libro": {
+                  "type": "string"
+                },
+                "tomo_libro": {
+                  "type": "string"
+                },
+                "area_libro": {
+                  "type": "string"
+                },
+                "edicion_libro": {
+                  "type": "string"
+                },
+                "ano_libro": {
+                  "type": "string"
+                },
+                "lugar_publicacion_libro": {
+                  "type": "string"
+                },
+                "ano_publicacion_libro": {
+                  "type": "string"
+                },
+                "autor": {
+                  "type": "integer"
+                },
+                "genero": {
+                  "type": "integer"
+                },
+                "idioma": {
+                  "type": "integer"
+                },
+                "material": {
+                  "type": "integer"
+                },
+                "sigtop": {
+                  "type": "integer"
+                },
+                "editorial": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+
+              ]
+            }
+          },
+          "404": {
+            "description": "usuarios no encontrados"
+          },
+          "406": {
+            "description": "unsupported accept header"
+          }
+        }
+      }
     }
   }
 }
