@@ -1,10 +1,10 @@
 class LibrosController < ApplicationController
   before_action :set_libro, only: [:show, :update, :destroy]
+  skip_before_filter :verify_authenticity_token, :only => [:update]
 
   # GET /libros
   def index
     #@libros = Libro.all
-    skip_before_filter :verify_authenticity_token, :only => [:update]
     @libros = Libro.joins(:autor, :genero, :idioma, :material, :sigtop, :editorial).select("libros.id, titulo_libro, tomo_libro, area_libro, edicion_libro, ano_libro, lugar_publicacion_libro, ano_publicacion_libro, nombre_autor, nombre_genero, significado_idioma, significado_material, localidad_sigtop, dewey_sigtop, cuter_sigtop, nombre_editorial")
 
 
