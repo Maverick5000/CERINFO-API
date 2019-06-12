@@ -1,6 +1,5 @@
 class LibrosController < ApplicationController
   before_action :set_libro, only: [:show, :update, :destroy]
-  skip_before_filter :verify_authenticity_token, :only => [:update]
 
   # GET /libros
   def index
