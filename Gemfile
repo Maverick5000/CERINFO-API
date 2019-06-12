@@ -11,6 +11,7 @@ gem 'paper_trail'
 gem 'faker'
 gem 'rswag'
 gem 'rspec-core', '~> 3.4'
+gem 'rack-cors'
 # Use mysql as the database for Active Record
 group :devlopment, :test do
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
