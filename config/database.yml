@@ -1,9 +1,9 @@
 default: &default
   adapter: postgresql
-  encoding: unicode
 
 development:
   <<: *default
+  adapter: mysql2
   username: krauss
   password: ventania
   database: your_app_development
