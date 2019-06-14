@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   resources :libros
   resources :multas
   get 'login', to: 'usuarios#login'
+  get 'user/multas', to: 'multas#multasUser'
+  get 'user/prestamos', to: 'prestamos#prestamosUser'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

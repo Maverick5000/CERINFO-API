@@ -13,6 +13,17 @@ class PrestamosController < ApplicationController
     render json: @prestamo
   end
 
+  # GET user/prestamos
+  def prestamosUser
+    @prestamos = Prestamo.where("usuario_id = ?",params[:usuario_id])
+    if @prestamos.empty?
+      @res = {"Respuesta": false}
+      render :status =>404, json: @res
+    else
+      render :status =>200, json: @prestamos
+    end
+  end
+
   # POST /prestamos
   def create
     @prestamo = Prestamo.new(prestamo_params)

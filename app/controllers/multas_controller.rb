@@ -13,6 +13,17 @@ class MultasController < ApplicationController
     render json: @multa
   end
 
+  # GET user/multas
+  def multasUser
+    @multas = Multa.where("usuario_id = ?",params[:usuario_id])
+    if @multas.empty?
+      @res = {"Respuesta": false}
+      render :status =>404, json: @res
+    else
+      render :status =>200, json: @multas
+    end
+  end
+
   # POST /multa
   def create
     @multa = Multa.new(Multa_params)
