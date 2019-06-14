@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_182803) do
+ActiveRecord::Schema.define(version: 2019_06_14_135122) do
 
   create_table "autors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nombre_autor"
@@ -117,7 +117,8 @@ ActiveRecord::Schema.define(version: 2019_04_03_182803) do
     t.string "tipo_usuario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "password"
+    t.string "password"
+    t.string "email"
   end
 
   create_table "versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
