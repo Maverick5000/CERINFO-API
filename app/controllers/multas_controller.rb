@@ -5,7 +5,7 @@ class MultasController < ApplicationController
   def index
     @multa = Multa.all
 
-    render json: @multa.to_json(:include => :libro)
+    render json: @multa.to_json(:include => :libro,:include => :usuario)
   end
 
   # GET /multa/1

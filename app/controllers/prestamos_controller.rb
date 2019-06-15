@@ -5,7 +5,7 @@ class PrestamosController < ApplicationController
   def index
     @prestamos = Prestamo.all
 
-    render json: @prestamos.to_json(:include => :libro)
+    render json: @prestamos.to_json(:include => :libro,:include => :usuario)
   end
 
   # GET /prestamos/1
