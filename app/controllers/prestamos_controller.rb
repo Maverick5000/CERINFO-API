@@ -5,7 +5,7 @@ class PrestamosController < ApplicationController
   def index
     @prestamos = Prestamo.all
 
-    render json: @prestamos
+    render json: @prestamos.to_json(:include => :libro)
   end
 
   # GET /prestamos/1
@@ -20,7 +20,7 @@ class PrestamosController < ApplicationController
       @res = {"Respuesta": false}
       render :status =>404, json: @res
     else
-      render :status =>200, json: @prestamos
+      render :status =>200, json: @prestamos.to_json(:include => :libro)
     end
   end
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_14_135122) do
+ActiveRecord::Schema.define(version: 2019_06_15_133033) do
 
   create_table "autors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nombre_autor"
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 2019_06_14_135122) do
     t.bigint "usuario_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "libro_id"
+    t.index ["libro_id"], name: "index_multa_on_libro_id"
     t.index ["usuario_id"], name: "index_multa_on_usuario_id"
   end
 
@@ -138,6 +140,7 @@ ActiveRecord::Schema.define(version: 2019_06_14_135122) do
   add_foreign_key "libros", "idiomas"
   add_foreign_key "libros", "materials"
   add_foreign_key "libros", "sigtops"
+  add_foreign_key "multa", "libros"
   add_foreign_key "multa", "usuarios"
   add_foreign_key "prestamos", "libros"
   add_foreign_key "prestamos", "usuarios"

@@ -5,7 +5,7 @@ class MultasController < ApplicationController
   def index
     @multa = Multa.all
 
-    render json: @multa
+    render json: @multa.to_json(:include => :libro)
   end
 
   # GET /multa/1
@@ -20,7 +20,7 @@ class MultasController < ApplicationController
       @res = {"Respuesta": false}
       render :status =>404, json: @res
     else
-      render :status =>200, json: @multas
+      render :status =>200, json: @multas.to_json(:include => :libro)
     end
   end
 
