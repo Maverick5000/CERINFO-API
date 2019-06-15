@@ -18,7 +18,7 @@ end
     Sigtop.create(localidad_sigtop: Faker::Address.country, dewey_sigtop:Faker::Lorem.words(5) , cuter_sigtop:Faker::Lorem.words(5) )
     Idioma.create(significado_idioma: Faker::Nation.language, abreviatura_idioma:Faker::Types.rb_string )
     Material.create(significado_material:Faker::Science.element , abreviatura_material:Faker::Types.rb_string)
-    Usuario.create(nombre_usuario: Faker::Name.first_name, paterno_usuario:Faker::Name.last_name, materno_usuario:Faker::Name.last_name, registro_usuario:Faker::Number.number(10), tipo_usuario:Faker::Military.air_force_rank, password:Faker::Number.number(5))
+    Usuario.create(nombre_usuario: Faker::Name.first_name, paterno_usuario:Faker::Name.last_name, materno_usuario:Faker::Name.last_name, registro_usuario:Faker::Number.number(10), tipo_usuario:Faker::Military.air_force_rank, password:Faker::Number.number(5), email: Faker::Internet.free_email)
 end
 
 50.times do
