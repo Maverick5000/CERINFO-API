@@ -1,5 +1,5 @@
 class MultasController < ApplicationController
-  before_action :set_Multa, only: [:show, :update, :destroy]
+  before_action :set_multa, only: [:show, :update, :destroy]
 
   # GET /multa
   def index
@@ -26,10 +26,10 @@ class MultasController < ApplicationController
 
   # POST /multa
   def create
-    @multa = Multa.new(Multa_params)
+    @multa = Multa.new(multa_params)
 
     if @multa.save
-      render json: @multa, status: :created, location: @multa
+      render json: @multa, status: :created
     else
       render json: @multa.errors, status: :unprocessable_entity
     end
@@ -51,12 +51,12 @@ class MultasController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_Multa
+    def set_multa
       @multa = Multa.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
-    def Multa_params
-      params.fetch(:Multa, {})
+    def multa_params
+      params.fetch(:multa, {}).permit(:usuario_id, :libro_id, :estado_multa, :detalle_multa, :monto_multa)
     end
 end
