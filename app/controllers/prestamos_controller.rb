@@ -57,6 +57,6 @@ class PrestamosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def prestamo_params
-      params.fetch(:prestamo, {})
+      params.fetch(:prestamo, {}).permit(:usuario_id, :libro_id, :dias_prestados, :fecha_devolucion, :fecha_prestamo)
     end
 end
