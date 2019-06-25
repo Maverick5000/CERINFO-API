@@ -13,6 +13,17 @@ class SolicitudsController < ApplicationController
     render :status =>200, json: @solicitud.to_json(:include => [:libro, :usuario])
   end
 
+  # GET user/solicituds
+  def solicitudsUser
+    @solicituds = Solicitud.where("usuario_id = ?",params[:usuario_id])
+    if @solicituds.empty?
+      @res = {"Respuesta": false}
+      render :status =>404, json: @res
+    else
+      render :status =>200, json: @solicituds.to_json(:include => [:libro, :usuario])
+    end
+  end
+
   # POST /solicituds
   def create
     @solicitud = Solicitud.new(solicitud_params)

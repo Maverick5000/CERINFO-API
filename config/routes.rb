@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get 'login', to: 'usuarios#login'
   get 'user/multas', to: 'multas#multasUser'
   get 'user/prestamos', to: 'prestamos#prestamosUser'
+  get 'user/solicituds', to: 'solicituds#solicitudsUser'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
