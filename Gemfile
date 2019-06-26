@@ -11,7 +11,7 @@ gem 'paper_trail'
 gem 'faker'
 gem 'rswag'
 gem 'rspec-core', '~> 3.4'
-gem 'rack-cors'
+# gem 'rack-cors'
 # Use mysql as the database for Active Record
 group :devlopment, :test do
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
@@ -22,6 +22,7 @@ group :production do
   gem 'pg', '~> 0.20' 
   gem 'mysql2', '>= 0.4.4', '< 0.6.0'
   gem 'rails_12factor'
+  gem 'rack-cors'
 end
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -40,7 +41,7 @@ end
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
